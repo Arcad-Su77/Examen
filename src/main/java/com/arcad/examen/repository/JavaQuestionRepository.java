@@ -11,7 +11,7 @@ import java.util.Set;
 @Repository
 public class JavaQuestionRepository implements QuestionRepository {
 
-    private Set<Question> questionSet;
+    private final Set<Question> questionSet;
     public JavaQuestionRepository() {
         questionSet = new HashSet<>();
     }

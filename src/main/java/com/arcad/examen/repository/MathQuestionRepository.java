@@ -10,7 +10,7 @@ import java.util.Set;
 
 @Repository
 public class MathQuestionRepository implements QuestionRepository {
-    private Set<Question> questionSet;
+    private final Set<Question> questionSet;
     public MathQuestionRepository() {
         questionSet = new HashSet<>();
     }

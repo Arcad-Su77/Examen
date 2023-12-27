@@ -1,10 +1,7 @@
 package com.arcad.examen.controller;
 
 import com.arcad.examen.entity.Question;
-import com.arcad.examen.service.api.MathQuestionService;
 import com.arcad.examen.service.impl.QuestionService;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
