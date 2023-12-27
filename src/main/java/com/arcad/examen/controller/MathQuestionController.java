@@ -1,7 +1,10 @@
-package com.arcad.examen.Controller;
+package com.arcad.examen.controller;
 
 import com.arcad.examen.entity.Question;
 import com.arcad.examen.service.api.MathQuestionService;
+import com.arcad.examen.service.impl.QuestionService;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -10,11 +13,12 @@ import java.util.Collection;
 @RequestMapping("/exam/math")
 public class MathQuestionController {
 
-    private final MathQuestionService mathQuestionService;
+    private final QuestionService mathQuestionService;
 
-    public MathQuestionController(MathQuestionService mathQuestionService) {
+    public MathQuestionController(QuestionService mathQuestionService) {
         this.mathQuestionService = mathQuestionService;
     }
+
     @GetMapping("/questions")
     public Collection<Question> getAllQuestions() {
         return mathQuestionService.getAll();

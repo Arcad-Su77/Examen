@@ -1,7 +1,7 @@
-package com.arcad.examen.Controller;
+package com.arcad.examen.controller;
 
 import com.arcad.examen.entity.Question;
-import com.arcad.examen.service.api.JavaQuestionService;
+import com.arcad.examen.service.impl.QuestionService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -9,9 +9,9 @@ import java.util.Collection;
 @RestController
 @RequestMapping("/exam/java")
 public class JavaQuestionController {
-    private final JavaQuestionService javaQuestionService;
+    private final QuestionService javaQuestionService;
 
-    public JavaQuestionController(JavaQuestionService javaQuestionService) {
+    public JavaQuestionController(QuestionService javaQuestionService) {
         this.javaQuestionService = javaQuestionService;
     }
     @GetMapping("/")

@@ -1,33 +1,13 @@
 package com.arcad.examen.service.api;
 
-import com.arcad.examen.entity.Question;
-import com.arcad.examen.service.impl.QuestionService;
+import com.arcad.examen.repository.MathQuestionRepository;
+import org.springframework.stereotype.Service;
 
-import java.util.Collection;
+@Service
+public class MathQuestionService extends CommonQuestionService {
 
-public class MathQuestionService implements QuestionService {
-    @Override
-    public Question add(String question, String answer) {
-        return null;
+    public MathQuestionService(MathQuestionRepository mathRepository) {
+        super(mathRepository);
     }
 
-    @Override
-    public Question add(Question question) {
-        return null;
-    }
-
-    @Override
-    public Question remove(Question question) {
-        return null;
-    }
-
-    @Override
-    public Collection<Question> getAll() {
-        return null;
-    }
-
-    @Override
-    public Question getRandomQuestion() {
-        return null;
-    }
 }
